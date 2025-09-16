@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd lumina-event-form && npm run build",
+  "outputDirectory": "lumina-event-form/.next",
+  "installCommand": "cd lumina-event-form && npm install",
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
