@@ -1,12 +1,18 @@
 {
-  "buildCommand": "cd lumina-event-form && npm run build",
-  "outputDirectory": "lumina-event-form/.next",
-  "installCommand": "cd lumina-event-form && npm install",
-  "framework": "nextjs",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/"
+      "src": "lumina-event-form/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lumina-event-form/$1"
     }
   ]
 }
